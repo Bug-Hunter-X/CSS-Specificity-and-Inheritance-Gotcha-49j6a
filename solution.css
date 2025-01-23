@@ -1,0 +1,17 @@
+The solution involves understanding CSS specificity and avoiding overuse of `!important`. Here's a revised version of the CSS:
+
+```css
+.parent {
+  color: blue;
+}
+
+.child {
+  color: red;
+}
+
+.child .grandchild {
+  color: green !important; /* Now, this will override the parent's color */
+}
+```
+
+By removing the unnecessary `!important` in `.child` and adding it to `.child .grandchild`, we ensure that the intended `color: green` takes precedence.  This approach is more maintainable and easier to understand.
